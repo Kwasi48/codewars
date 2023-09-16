@@ -17,7 +17,6 @@
 //It's up to you but you must keep it as a parameter because the tests have it as an argument.
 
 import "dart:core";
-import "dart:math";
 
 void main() {
   int evaporator(double content, double evap_per_day, double threshold) {
