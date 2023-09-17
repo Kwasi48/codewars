@@ -13,13 +13,9 @@
 
 void main() {
   int Add(int x, int y) {
-    int result;
-    int result1 = x & y;
-    int result2 = x & y;
-    result = result1 & result2;
-
-    return result;
+    for (int i = 1; i <= y; i++) x++;
+    return x;
   }
 
-  print(Add(7, 9));
+  print(Add(2, 2));
 }
