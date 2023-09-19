@@ -13,9 +13,20 @@
 
 void main() {
   int Add(int x, int y) {
-    for (int i = 1; i <= y; i++) x++;
+    // if (y <= 0) {
+    //   for (int i = 1; i <= x; i++) y++;
+    //   return y;
+    // }
+    // if (x < 0 || y < 0){
+
+    // }
+    // for (int i = 1; i <= y; i++) x++;
+
+    int carry = x & y;
+    x = x ^ y;
+    y = carry << 1;
     return x;
   }
 
-  print(Add(2, 2));
+  print(Add(-2, -4));
 }
