@@ -7,7 +7,6 @@
 //Explanation
 //25 squared is 625 , Ends with the same number's digits which are 25 .
 
-import 'dart:math';
 
 void main() {
   String automorphic(n) =>
