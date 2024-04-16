@@ -8,8 +8,11 @@ void main() {
       if (special.contains(nu)) {
         return 'Special!';
       }
-      if (special.contains(numtoInt)) {
-        return 'Special!!';
+      // if (special.contains(numtoInt)) {
+      //   return 'Special!!';
+      // }
+      if (nu > 5) {
+        return 'NOT!!';
       }
     }
     return 'NOT!!';
@@ -30,5 +33,23 @@ void main() {
     return "Special!";
   }
 
-  print(SpecialNum(11));
+  String speciaNumber(n) {
+    List special = [1, 2, 3, 4, 5];
+    String num = n.toString();
+    List<String> numList = num.split('');
+    List<int> numtoInt = numList.map(int.parse).toList();
+    for (var nu in numtoInt) {
+      for (var sp in special) {
+        if (nu == sp) {
+          return 'Special!!';
+        }
+        if (nu > 5) {
+          return 'NOT!!';
+        }
+      }
+    }
+    return 'NOT!!';
+  }
+
+  print(speciaNumber(26));
 }
