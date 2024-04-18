@@ -14,3 +14,8 @@ void main(List<String> args) {
     return (ret);
   }
 }
+
+
+// nameValue ["abc","abc abc"] 
+//should return [6,24] because of [ 6 * 1, 12 * 2 ]. 
+//Note how spaces are ignored.
