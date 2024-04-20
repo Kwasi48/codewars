@@ -10,6 +10,7 @@
 void main(List<String> args) {
   List<num> tribonacci(List<num> signature, int n) {
     List<num> tribList = [];
+    int counter = 3;
     if (n == 0) {
       return tribList;
     }
@@ -17,14 +18,18 @@ void main(List<String> args) {
       print('add only 3 numbers you dumb shit');
       return tribList;
     }
-    while (tribList.length < n) {
+    while (counter < n) {
       signature.forEach((element) {
         tribList.add(element);
       });
-      var nextTribNum = signature[signature.length - 2] +
-          signature[signature.length - 1] +
-          signature[signature.length - 3];
+      var nextTribNum = signature[counter - 2] +
+          signature[counter - 1] +
+          signature[counter - 0];
+      tribList.add(nextTribNum);
+      counter++;
     }
     return tribList;
   }
+
+  print(tribonacci([3, 4, 5], 10));
 }
