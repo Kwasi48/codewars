@@ -9,11 +9,16 @@
 
 void main(List<String> args) {
   List<num> tribonacci(List<num> signature, int n) {
-    List<int> tribList = [];
+    List<num> tribList = [];
     if (n == 0) {
       return tribList;
     }
-
-    return [];
+    while (tribList.length < n) {
+      signature.forEach((element) {
+        tribList.add(element);
+      });
+      var nextTribNum = 
+    }
+    return tribList;
   }
 }
