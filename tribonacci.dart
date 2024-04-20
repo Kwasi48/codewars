@@ -9,7 +9,10 @@
 
 void main(List<String> args) {
   List<num> tribonacci(List<num> signature, int n) {
-    // your code here
+    List<int> tribList = [];
+    if (n == 0) {
+      return tribList;
+    }
 
     return [];
   }
