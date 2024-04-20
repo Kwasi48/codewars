@@ -9,27 +9,32 @@
 
 void main(List<String> args) {
   List<num> tribonacci(List<num> signature, int n) {
+    //create an empty final list
     List<num> tribList = [];
+    // check if n = 0 and return empty list
     int counter = 3;
     if (n == 0) {
       return tribList;
     }
+    //check if signature is more than 3
     if (signature.length > 3) {
-      print('add only 3 numbers you dumb shit');
+      print('add only 3 numbers please');
       return tribList;
     }
+    //add the elements in signature into the final list.
+    signature.forEach((element) {
+      tribList.add(element);
+    });
+    //we then add the first 3 elements in the final list and increse counter by 1
     while (counter < n) {
-      signature.forEach((element) {
-        tribList.add(element);
-      });
-      var nextTribNum = signature[counter - 2] +
-          signature[counter - 1] +
-          signature[counter - 0];
+      var nextTribNum =
+          tribList[counter - 2] + tribList[counter - 1] + tribList[counter - 3];
       tribList.add(nextTribNum);
       counter++;
     }
+    tribList.length = n;
     return tribList;
   }
 
-  print(tribonacci([3, 4, 5], 10));
+  print(tribonacci([1, 1, 1], 1));
 }
