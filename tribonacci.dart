@@ -13,11 +13,17 @@ void main(List<String> args) {
     if (n == 0) {
       return tribList;
     }
+    if (signature.length > 3) {
+      print('add only 3 numbers you dumb shit');
+      return tribList;
+    }
     while (tribList.length < n) {
       signature.forEach((element) {
         tribList.add(element);
       });
-      var nextTribNum = 
+      var nextTribNum = signature[signature.length - 2] +
+          signature[signature.length - 1] +
+          signature[signature.length - 3];
     }
     return tribList;
   }
