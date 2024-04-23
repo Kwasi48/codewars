@@ -44,3 +44,10 @@ void main() {
 
   print(XO('vix'));
 }
+
+
+/// Best Solution
+///bool XO(str) {
+//  var s = str.toLowerCase();
+//  return 'x'.allMatches(s).length == 'o'.allMatches(s).length;
+//}
