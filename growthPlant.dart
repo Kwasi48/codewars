@@ -22,13 +22,20 @@ void main() {
     }
 
     while (plantHeight < desiredHeight) {
+      print('days: $numberOfDays');
       plantHeight = plantHeight + upSpeed;
-      plantHeight = plantHeight - downSpeed;
       numberOfDays++;
+      if (plantHeight >= desiredHeight) {
+        break;
+      }
+      print('height: $plantHeight');
+      plantHeight = plantHeight - downSpeed;
+      print('height: $plantHeight');
     }
 
+    plantHeight = desiredHeight;
     return numberOfDays;
   }
 
-  print(growingPlant(100, 10, 910));
+  print(growingPlant(5, 2, 6));
 }
