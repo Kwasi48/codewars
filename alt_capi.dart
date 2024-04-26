@@ -6,8 +6,12 @@
 // The input will be a lowercase string with no spaces.
 // Good luck!
 
-List<String> capitalize(String x) {
-  List<String> finalList = [];
-
-  return [];
+void main(List<String> args) {
+  List<String> capitalize(String x) {
+    String xToLow = x.toLowerCase();
+    List<String> finalList = [];
+    List<String> initialList = xToLow.split('');
+    print(initialList);
+    return [];
+  }
 }
