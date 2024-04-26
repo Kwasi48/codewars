@@ -8,10 +8,17 @@
 
 void main(List<String> args) {
   List<String> capitalize(String x) {
+    int counter = 0;
+    List<String> evenList = [];
     String xToLow = x.toLowerCase();
-    List<String> finalList = [];
     List<String> initialList = xToLow.split('');
-    print(initialList);
+    for (var element in initialList) {
+      evenList.add(element.toUpperCase());
+    }
+    print(evenList);
+
     return [];
   }
+
+  capitalize('ertWy');
 }
