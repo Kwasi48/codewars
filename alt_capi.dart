@@ -7,14 +7,23 @@
 
 void main(List<String> args) {
   List<String> capitalize(String x) {
+    int counter = 0;
     List<String> evenList = [];
     String xToLow = x.toLowerCase().trim();
     List<String> initialList = xToLow.split('');
+    List<String> oddlist;
 
-    print(evenList);
+    for (var element in initialList) {
+      if (element.length % 2 == 0) {
+        element.toUpperCase();
+      }
+      evenList.add(element);
+    }
 
-    return initialList;
+    //print(evenList);
+
+    return evenList;
   }
 
-  capitalize('ertWy');
+  print(capitalize('ertWy'));
 }
