@@ -10,10 +10,14 @@ void main(List<String> args) {
   List<String> capitalize(String x) {
     int counter = 0;
     List<String> evenList = [];
-    String xToLow = x.toLowerCase();
+    String xToLow = x.toLowerCase().trim();
     List<String> initialList = xToLow.split('');
-    for (var element in initialList) {
-      evenList.add(element.toUpperCase());
+    while (counter < initialList.length) {
+      initialList.indexOf(initialList[counter]) % 2 == 0
+          ? initialList[counter].toUpperCase()
+          : '';
+      evenList.add(initialList[counter]);
+      counter++;
     }
     print(evenList);
 
